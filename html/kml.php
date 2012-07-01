@@ -25,8 +25,12 @@ for ($i = 0; $i < 1000; $i++) {
 
 	$kml[] = '<Placemark>';
 	$kml[] = '<name>' . $name . '</name>';
-	$kml[] = '<Point><coordinates>' . $lon . ',' . $lat . '</coordinates></Point>';
-	$kml[] = '<atom:link>' . $uri . '</atom:link>';
+	if ($lon !== '' && $lat !== '') {
+		$kml[] = '<Point><coordinates>' . $lon . ',' . $lat . '</coordinates></Point>';
+	}
+	if ($uri !== '') {
+		$kml[] = '<atom:link>' . $uri . '</atom:link>';
+	}
 	$kml[] = '</Placemark>';
 }
 

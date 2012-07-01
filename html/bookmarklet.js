@@ -215,7 +215,8 @@ function chizoolCapybalaComInit() {
 				addressNode.lat = results[0].geometry.location.lat();
 				addressNode.lon = results[0].geometry.location.lng();
 			} else {
-				// do nothing
+				addressNode.lat = '';
+				addressNode.lon = '';
 			}
 			num_geocode_completed++;
 
