@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 
 app = Flask(__name__)
 app.config.update({
@@ -26,6 +26,11 @@ def index():
     bookmarklet_url = url_for('static', filename='bookmarklet.js', _external=True)
     bookmarklet = build_bookmarklet(bookmarklet_url)
     return render_template('index.html', bookmarklet=bookmarklet)
+
+
+@app.route('/bookmarklet.js')
+def bookmarklet():
+    return redirect(url_for('static', filename='bookmarklet.js'))
 
 
 @app.route('/kml/')
