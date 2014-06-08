@@ -65,10 +65,10 @@ function chizoolCapybalaComInit() {
     var BUILDING2_re = /^(.*(?:丁目|番地?|号))[^地\d０-９]+(?:ビル|$)/;
     AddressLink.re = {
       general: new RegExp(
-        '(?:' + TODOFUKEN_ex + '|' + CITY_SEPARATE_CHAR_ex + SHICHOSON_ex + ')' + '[ \t　]*'
-        '(?:' + AZA_ex + '[ \t　]*'
-          '(?:' + BANCHI_ex + '(?:丁目|番地?|号)?[-―－ー]?' + '){1,8}'
-          ')'
+        '(?:' + TODOFUKEN_ex + '|' + CITY_SEPARATE_CHAR_ex + SHICHOSON_ex + ')' + '[ \t　]*' +
+        '(?:' + AZA_ex + '[ \t　]*' +
+          '(?:' + BANCHI_ex + '(?:丁目|番地?|号)?[-―－ー]?' + '){1,8}' +
+          ')' +
         '|' + KYOTO_ex
       ),
       prews: PRE_WHITESPACES_re,
