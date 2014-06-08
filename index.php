@@ -48,11 +48,12 @@ define('BOOKMARKLET', "javascript:(function(){" .
 			</ol>
 			<p>ここで<a href="<?php echo BOOKMARKLET; ?>">住所を地図上に表示</a>というブックマークレットをクリックすると…</p>
 			<p>ブックマークレットをブックマークツールバーなどに登録しておくと便利です。</p>
-			
+
 			<p>
 			スクリーンショット<br/>
-			<a href="images/capture.png"><img src="images/capture_thumbnail.png"/></a></p>
-			
+			<a href="images/screenshot.png"><img src="images/screenshot.png" style="width: 400px"/></a>
+			</p>
+
 		</div><!--/centering-->
 	</div><!--/contents-->
 	<footer>
